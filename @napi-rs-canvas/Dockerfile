@@ -5,4 +5,4 @@ COPY ./package-lock.json /opt/nodejs/
 
 RUN cd /opt/nodejs && npm i
 
-RUN cd /opt && zip -ry layer.zip * .[^.]*
+RUN cd /opt && zip -r layer.zip * .[^.]*

@@ -1,4 +1,22 @@
 import { $ } from 'bun';
+import { exit } from 'process';
+import { parseArgs } from 'util';
+
+const { values } = parseArgs({
+  args: Bun.argv,
+  options: {
+    project: { type: 'string' },
+  },
+  strict: true,
+  allowPositionals: true,
+});
+
+const PROJECTS = ['@napi-rs-canvas'] as const;
+const project = values.project as (typeof PROJECTS)[number];
+if (!PROJECTS.includes(project)) {
+  console.error('不支持的项目, 请检查--project参数');
+  exit(1);
+}
 
 const PROJECT = '@napi-rs-canvas';
 const IMAGE_NAME = `${PROJECT.replace('@', '')}-layer`;

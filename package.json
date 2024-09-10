@@ -1,0 +1,41 @@
+{
+  "name": "aliyunfc-layers",
+  "scripts": {
+    "check-type": "npm run check-type",
+    "clean": "del **/dist **/.build **/.swc **/.malagu **/.turbo **/node_modules !node_modules **/.eslintcache",
+    "commit": "cz",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "lint:js": "eslint . --cache --ext .js,.jsx,.ts,.tsx",
+    "lint:js:fix": "eslint . --cache --ext .js,.jsx,.ts,.tsx --fix",
+    "prepare": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,html,css,md,json}": "prettier --check",
+    "**/*.{js,jsx,ts,tsx}": "eslint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "prettier": "@xstools-dev/prettier-config/base",
+  "eslintConfig": {
+    "extends": "@xstools-dev/eslint-config/base"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.9",
+    "@types/node": "^22.5.4",
+    "@xstools-dev/mix": "^0.7.1",
+    "typescript": "^5.6.2"
+  }
+}

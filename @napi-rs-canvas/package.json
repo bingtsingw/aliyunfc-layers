@@ -2,6 +2,6 @@
   "name": "@aliyunfc-layers/napi-rs-canvas",
   "private": true,
   "dependencies": {
-    "@napi-rs/canvas": "^0.1.55"
+    "@napi-rs/canvas": "^0.1.57"
   }
 }

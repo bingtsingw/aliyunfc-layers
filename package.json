@@ -33,9 +33,9 @@
     "extends": "@xstools-dev/eslint-config/base"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.11",
-    "@types/node": "^22.7.5",
-    "@xstools-dev/mix": "^0.7.1",
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.1",
+    "@xstools-dev/mix": "^0.8.0",
     "typescript": "^5.6.3"
   },
   "packageManager": "pnpm@9.12.1"

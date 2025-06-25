@@ -26,7 +26,7 @@ async function main() {
   try {
     // 构建 Docker 镜像
     console.log('Building Docker image ...');
-    await $`docker build -t ${IMAGE_NAME} ./${PROJECT}`;
+    await $`docker build --platform linux/amd64 -t ${IMAGE_NAME} ./${PROJECT}`;
 
     // 创建容器但不运行它
     console.log('Creating container ...');

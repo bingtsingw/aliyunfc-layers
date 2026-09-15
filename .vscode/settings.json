@@ -1,22 +1,13 @@
 {
-  "css.validate": false,
-  "stylelint.enable": true,
+  "js/ts.tsdk.path": "./node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "editor.autoClosingQuotes": "always",
-  "editor.linkedEditing": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
   "editor.quickSuggestions": {
     "strings": true
   },
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "javascript"
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
   },
   "search.exclude": {
     "**/node_modules": true,
@@ -25,6 +16,5 @@
     "package-lock.json": true,
     "pnpm-lock.yaml": true,
     "yarn.lock": true
-  },
-  "typescript.tsdk": "./node_modules/typescript/lib"
+  }
 }

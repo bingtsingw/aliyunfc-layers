@@ -1,6 +1,6 @@
-import { $ } from 'bun';
 import { exit } from 'process';
 import { parseArgs } from 'util';
+import { $ } from 'bun';
 
 const { values } = parseArgs({
   args: Bun.argv,
@@ -51,4 +51,4 @@ async function main() {
   }
 }
 
-main();
+await main();
